@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.874.0.min.js"></script>
+    <!-- Axios for API calls -->
+    <script type="text/javascript" src="./sdk/lib/axios/dist/axios.standalone.js"></script>
+    <!-- CryptoJS for signing requests -->
+    <script type="text/javascript" src="./sdk/lib/CryptoJS/rollups/crypto-js.js"></script>
+    <script type="text/javascript" src="./sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="./sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="./sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <!-- URL template library -->
+    <script type="text/javascript" src="./sdk/lib/url-template/url-template.js"></script>
+    <!-- API Gateway Core libraries -->
+    <script type="text/javascript" src="./sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="./sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="./sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="./sdk/lib/apiGatewayCore/utils.js"></script>
+    <!-- Generated API Gateway SDK -->
+    <script type="text/javascript" src="./sdk/apigClient.js"></script>
+</head>
+<body>
+    <h1>Photo Album</h1>
+    <div id="search-section">
+        <input type="text" id="search-input" placeholder="Search photos...">
+        <button onclick="searchPhotos()">Search</button>
+    </div>
+    <div id="results"></div>
+    <div id="upload-section">
+        <input type="file" id="file-input" accept="image/*">
+        <input type="text" id="custom-labels" placeholder="Custom labels (comma-separated)">
+        <button onclick="uploadPhoto()">Upload</button>
+    </div>
+
+<script>
+    var apigClient = apigClientFactory.newClient({
+  apiKey: 'bIlK34DSv9EqzsCkb0Cx4YwCjesx6X3aeK6uIZB5'
+});
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
